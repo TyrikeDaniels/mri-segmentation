@@ -17,7 +17,6 @@ def train(model, criterion, optimizer, scheduler, epochs, loaders):
 
     model_path = Path(__file__).parent.parent / 'models' / 'best_model.pth'
     model_path.parent.mkdir(parents=True, exist_ok=True)
-    torch.save(model.state_dict(), str(model_path)) # debugging
 
     train_loader, val_loader = loaders
     best_val_loss = float('inf')
