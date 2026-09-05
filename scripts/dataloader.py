@@ -34,8 +34,10 @@ def main():
         "val"  : val_loader, 
         "test" : test_loader
     }
-
-    with open("data/loader_data.pkl", "wb") as f:
+    
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    image_dir = os.path.join(script_dir, '..', 'data', 'loader_data.pkl')    
+    with open(image_dir, "wb") as f:
         pickle.dump(loaders, f)
 
 if __name__ == "__main__":
