@@ -66,8 +66,8 @@ def main():
             flat_train_data.append((batch_mri[i], batch_mask[i]))
 
     fig = show_mri(flat_train_data, train_idx, train_mask)
+    os.makedirs('/visuals', exist_ok=True)
     fig.savefig('/visuals/segmentation_results.png', dpi=150, bbox_inches='tight')
-
 if __name__ == "__main__":
     main()
 
