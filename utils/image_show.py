@@ -27,6 +27,7 @@ def show_mri(data, indx, pred, num=3, alpha=0.5):
         # MRI only
         axs[i, 2].imshow(mri, cmap='gray')
         axs[i, 2].set_title("MRI")
-    
+
+    plt.show()
     plt.tight_layout()
     return fig
